@@ -19,9 +19,10 @@ Put the script file in an appropriate folder and run the installation command. T
 ```shell
 Required one of the following to have on the server: python OR bc OR php
 It is used for floating point values calculation
+```
 
 ##### Configuration
-```
+```shell
 
 // Where to send the warning mail
 OPTION_ALERT_EMAIL="admin@admin.ge"     #where to send the warning mail
