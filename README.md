@@ -1,12 +1,6 @@
 # Servers Load Notifier
 Shell scripts which send email alert if CPU/Memory usage continuously goes above a certain amount.
 
-*[Portfolio](http://www.admin.ge/portfolio)*<br>
-*[GR8cms.com](http://www.GR8cms.com)*
-
-*Copyright (c) 2016 GR*<br>
-*licensed under the MIT licenses*<br>
-*http://www.opensource.org/licenses/mit-license.html*
 
 ##USAGE
 
