@@ -55,11 +55,7 @@ processCpuCheck() {
     echo -e "AVG CPU LOAD:\t$cpuAvgLoad%"
     
     echo -e "\n"
-    
-    # v1
-    #if [ $cpuAvgLoad -ge $OPTION_ALERT_ON_CPU_LOAD_IF_EXCEEDS ]
 
-	# v2
     if [ $(evalExpression "$cpuAvgLoad>$OPTION_ALERT_ON_CPU_LOAD_IF_EXCEEDS") > 0 ]
     then
         # http://www.tecmint.com/commands-to-collect-system-and-hardware-information-in-linux/
