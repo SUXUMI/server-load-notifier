@@ -9,6 +9,8 @@ By these scripts user can get email alert on cpu/memory overload and also get de
 
 Put the script file in an appropriate folder and run the installation command. Than will be created a cronjob for that file, which will monitor the server load.
 
+Calculation is based on the very top loaded process load value
+
 ##### Requirements
 ```shell
 Required one of the following to have on the server: python OR bc OR php
