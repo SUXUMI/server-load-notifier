@@ -14,7 +14,7 @@ getCurrentCpuLoad() {
     echo `ps -auxe | awk '{print $1, $2, $3, $4, $10, $11}' | sort -k3rn | head -n 10 | sed -n '1,1p'`
 }
 
-# evaluates math expression
+# evaluates math/logical expression
 evalExpression() {
     case $OPTION_CALC_DECIMALS_VIA in
         "python")
