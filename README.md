@@ -25,10 +25,10 @@ It is used for floating point values calculation
 ```shell
 
 // Where to send the warning mail
-OPTION_ALERT_EMAIL="admin@admin.ge"     #where to send the warning mail
+OPTION_ALERT_EMAIL="your@personal.email"
 
 // If the high CPU load exceeds this value, then will be sent an email alert
-OPTION_ALERT_ON_CPU_LOAD_IF_EXCEEDS=75  #percent, integer!
+OPTION_ALERT_ON_CPU_LOAD_IF_EXCEEDS=75  #integer!
 
 // How many times check the top loaded process
 OPTION_CHECK_n_TIMES=5                  #integer
@@ -53,4 +53,13 @@ monitor_cpu.sh install
 ```shell
 // will be removed the cron job created after installation
 monitor_cpu.sh uninstall
+```
+
+##### Email sample
+```shell
+USER    PID     %CPU    %MEM    TIME    COMMAND
+apache  9298    12.8    0.1     0:01    /usr/sbin/httpd+
+apache  9460    9.7     0.1     0:00    /usr/sbin/httpd+
+mysql   18667   5.6     0.4     1841:19 mysqld
+apache  9288    9.3     0.1     0:04    /usr/sbin/httpd+
 ```
