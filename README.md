@@ -11,13 +11,13 @@ Using these script user gets email alert on **cpu overload** overload and get de
 ##USAGE
 Put the script file in an appropriate folder and run the installation command. Than will be created a cronjob for that file, which will monitor the server load.
 
-##### Requirements
+#### Requirements
 ```shell
 Required one of the following to have on the server: python OR bc OR php
 It is used for floating point values calculation
 ```
 
-##### Configuration
+#### Configuration
 ```shell
 
 // Where to send the warning mail
@@ -39,7 +39,7 @@ OPTION_CALC_DECIMALS_VIA="python"       #possible values: {python,php,bc}
 OPTION_CRONTAB_SCHEDULE="*/5 * * * *"
 ```
 
-##### Installation
+#### Installation
 ```shell
 // will be created a cron job
 monitor_cpu.sh install
@@ -48,7 +48,7 @@ monitor_cpu.sh install
 monitor_disk_space.sh install
 ```
 
-##### De-installation
+#### De-installation
 ```shell
 // will be removed the cron job created after installation
 monitor_cpu.sh uninstall
