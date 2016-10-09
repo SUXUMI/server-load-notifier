@@ -24,7 +24,7 @@ It is used for floating point values calculation
 OPTION_ALERT_EMAIL="your@personal.email"
 
 // If the high CPU load exceeds this value, then will be sent an email alert
-OPTION_ALERT_ON_CPU_LOAD_IF_EXCEEDS=75  #integer!
+OPTION_ALERT_ON_CPU_LOAD_IF_EXCEEDS=75  #integer
 
 // How many times check the top loaded process
 OPTION_CHECK_n_TIMES=5                  #integer
