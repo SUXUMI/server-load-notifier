@@ -43,12 +43,18 @@ OPTION_CRONTAB_SCHEDULE="*/5 * * * *"
 ```shell
 // will be created a cron job
 monitor_cpu.sh install
+
+//
+monitor_disk_space.sh install
 ```
 
 ##### De-installation
 ```shell
 // will be removed the cron job created after installation
 monitor_cpu.sh uninstall
+
+//
+monitor_disk_space.sh uninstall
 ```
 
 ##### Email sample
