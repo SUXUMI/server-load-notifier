@@ -57,9 +57,9 @@ monitor_cpu.sh uninstall
 monitor_disk_space.sh uninstall
 ```
 
-##### Email sample
+#### Email sample
 
-**in case of monitor_cpu.sh**
+#####in case of monitor_cpu.sh
 ```shell
 USER    PID     %CPU    %MEM    TIME    COMMAND
 apache  9298    12.8    0.1     0:01    /usr/sbin/httpd+
@@ -68,7 +68,7 @@ mysql   18667   5.6     0.4     1841:19 mysqld
 apache  9288    9.3     0.1     0:04    /usr/sbin/httpd+
 ```
 
-**in case of monitor_disk_space.sh**
+#####in case of monitor_disk_space.sh
 ```
 Filesystem  Size  Used  Avail  Use%  Mounted on
 /dev/md5         16G  3.0G   12G  21% /usr+
