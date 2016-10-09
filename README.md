@@ -1,11 +1,11 @@
 # Servers Load Notifier
-Shell scripts which send email alert if CPU usage continuously goes above a certain amount.
+Shell script which sends email alert if CPU usage continuously goes above a certain amount.
 
 
 ##USAGE
 
-These scripts are kind of System Activity Reporter [SAR] on Linux.
-By these scripts user can get email alert on cpu overload and also get detailed information for overloaded processes
+These script is kind of System Activity Reporter [SAR] on Linux.
+By these script user can get email alert on cpu overload and also get detailed information for overloaded processes
 
 Put the script file in an appropriate folder and run the installation command. Than will be created a cronjob for that file, which will monitor the server load.
 
