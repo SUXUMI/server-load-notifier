@@ -1,9 +1,9 @@
 # Servers Load Notifier
 Shell scripts which sends email alert if certain usage data continuously goes above a certain amount.
 
-**monitor_cpu.sh** - monitor cpu usage
-// These script is kind of System Activity Reporter [SAR] on Linux.
-Using these script user gets email alert on **cpu overload** overload and get detailed information for overloaded processes
+**monitor_cpu.sh** - monitor cpu usage<br>
+<cite>These script is kind of System Activity Reporter [SAR] on Linux.<br>
+Using these script user gets email alert on **cpu overload** overload and get detailed information for overloaded processes</cite>
 
 Calculation is based on the very top loaded process load value
 
