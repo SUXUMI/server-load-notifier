@@ -56,7 +56,7 @@ processCpuCheck() {
     
     echo -e "\n"
 
-    if [ $(evalExpression "$cpuAvgLoad>$OPTION_ALERT_ON_CPU_LOAD_IF_EXCEEDS") > 0 ]
+    if [ $(evalExpression "$cpuAvgLoad>$OPTION_ALERT_ON_CPU_LOAD_IF_EXCEEDS") -ge 1 ]
     then
         # http://www.tecmint.com/commands-to-collect-system-and-hardware-information-in-linux/
         hostname=$(uname -n)
