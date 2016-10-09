@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # CONFIGURATION
-OPTION_ALERT_EMAIL="your@personal.email"       #where to send the warning mail
+OPTION_ALERT_EMAIL="your@personal.email"  #where to send the warning mail
 OPTION_ALERT_ON_CPU_LOAD_IF_EXCEEDS=72.5  #percent, decimal
 OPTION_CHECK_n_TIMES=5                    #how many times to check the load of cpu, integer
 OPTION_CHECK_DELAY=6                      #delay between checks, decimal
@@ -58,15 +58,9 @@ processCpuCheck() {
 
     if [ $(evalExpression "$cpuAvgLoad>$OPTION_ALERT_ON_CPU_LOAD_IF_EXCEEDS") -ge 1 ]
     then
-        # http://www.tecmint.com/commands-to-collect-system-and-hardware-information-in-linux/
         hostname=$(uname -n)
         
-        #echo "$serverIp"
-        #echo -e "USER PID %CPU %MEM TIME COMMAND\r\n${cpuLoadData_1}"
-        #echo -e "USER PID %CPU %MEM TIME COMMAND\r\n${cpuLoadData_1}" | mail -r "root@$serverIp" -s "WARNING: CPU LOAD - ${cpuAvgLoad}%" "$OPTION_ALERT_EMAIL"
-        
         message=$(echo -e "USER PID %CPU %MEM TIME COMMAND\n${summaryCpuLoadData}\n")
-        # http://stackoverflow.com/a/22957485/1565790
         message=$(sed "s/ /\\t/g" <<<"$message")
         
         echo "$message"
