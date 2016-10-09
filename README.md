@@ -13,7 +13,7 @@ Calculation is based on the very top loaded process load value
 
 ##### Requirements
 ```shell
-Required one of the following to have on the server: python OR bc OR php
+Required one of the following to have on the server: **python** OR **bc** OR **php**
 It is used for floating point values calculation
 ```
 
