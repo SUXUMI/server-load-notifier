@@ -1,11 +1,11 @@
 #!/bin/bash
 
 # CONFIGURATION
-OPTION_ALERT_EMAIL="admin@admin.ge"     #where to send the warning mail
-OPTION_ALERT_ON_CPU_LOAD_IF_EXCEEDS=75  #percent, integer!
-OPTION_CHECK_n_TIMES=5                  #how many times to check the load of cpu, integer
-OPTION_CHECK_DELAY=6                    #delay between checks, decimal
-OPTION_CALC_DECIMALS_VIA="python"       #arbitrary precision calculator, possible values: {python,php,bc}
+OPTION_ALERT_EMAIL="your@personal.email"       #where to send the warning mail
+OPTION_ALERT_ON_CPU_LOAD_IF_EXCEEDS=72.5  #percent, decimal
+OPTION_CHECK_n_TIMES=5                    #how many times to check the load of cpu, integer
+OPTION_CHECK_DELAY=6                      #delay between checks, decimal
+OPTION_CALC_DECIMALS_VIA="python"         #arbitrary precision calculator, possible values: {python,php,bc}
 OPTION_CRONTAB_SCHEDULE="*/5 * * * *"
 
 # gets the last top CPU loaded process from distinct `ps` command
@@ -15,7 +15,7 @@ getCurrentCpuLoad() {
 }
 
 # evaluates math expression
-evalMathExpression() {
+evalExpression() {
     case $OPTION_CALC_DECIMALS_VIA in
         "python")
             echo $(python -c "print int($1)")
@@ -42,13 +42,13 @@ processCpuCheck() {
         currentCpuLoad=$(echo "$currentCpuLoadData" | awk '{print $3}')
         echo -e "CPU LOAD:\t$currentCpuLoad%"
         
-        summaryCpuLoad=$(evalMathExpression "$summaryCpuLoad+$currentCpuLoad" "float")
+        summaryCpuLoad=$(evalExpression "$summaryCpuLoad+$currentCpuLoad" "float")
         #echo -e "$summaryCpuLoad"
         
         sleep "$OPTION_CHECK_DELAY"
     done
     
-    cpuAvgLoad=$(evalMathExpression "$summaryCpuLoad/$OPTION_CHECK_n_TIMES" "int")
+    cpuAvgLoad=$(evalExpression "$summaryCpuLoad/$OPTION_CHECK_n_TIMES" "int")
     
     echo "-------------------"
     
@@ -56,7 +56,11 @@ processCpuCheck() {
     
     echo -e "\n"
     
-    if [ $cpuAvgLoad -ge $OPTION_ALERT_ON_CPU_LOAD_IF_EXCEEDS ]
+    # v1
+    #if [ $cpuAvgLoad -ge $OPTION_ALERT_ON_CPU_LOAD_IF_EXCEEDS ]
+
+	# v2
+    if [ $(evalExpression "$cpuAvgLoad>$OPTION_ALERT_ON_CPU_LOAD_IF_EXCEEDS") > 0 ]
     then
         # http://www.tecmint.com/commands-to-collect-system-and-hardware-information-in-linux/
         hostname=$(uname -n)
