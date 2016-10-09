@@ -3,12 +3,10 @@ Shell scripts which sends email alert if certain usage data continuously goes ab
 
 **monitor_cpu.sh** - monitor cpu usage
 >These script is kind of System Activity Reporter [SAR] on Linux.<br>
-Using these script user gets email alert on **cpu overload** overload and get detailed information for overloaded processes
-
-Calculation is based on the very top loaded process load value
+Using these script user gets email alert on **cpu overload** overload and get detailed information for overloaded processes<br>Calculation is based on the very top loaded process load value
 
 **monitor_disk_space.sh** - monitor disk space usage
-Using these script user gets email alert on **disk space usage** overload and report file system disk space usage.
+>Using these script user gets email alert on **disk space usage** overload and report file system disk space usage.
 
 ##USAGE
 Put the script file in an appropriate folder and run the installation command. Than will be created a cronjob for that file, which will monitor the server load.
