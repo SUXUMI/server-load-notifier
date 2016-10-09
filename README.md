@@ -1,5 +1,5 @@
 # Servers Load Notifier
-Shell scripts which sends email alert if certain usage data continuously goes above a certain amount.
+Shell scripts which sends email alert if CPU/Disk Space usage continuously goes above a certain amount.
 
 **monitor_cpu.sh** - monitor cpu usage
 >These script is kind of System Activity Reporter [SAR] on Linux.<br>
