@@ -9,22 +9,21 @@ Using these script user gets email alert on **cpu overload** and get detailed in
 >Using these script user gets email alert on **disk space usage** overload and report file system disk space usage.
 
 ##USAGE
-Put the script file in an appropriate folder and run the installation command. Than will be created a cronjob for that file, which will monitor the server load.
+Put the script file in an appropriate folder and run the installation command. Then it will be created a cronjob for that file, which will monitor the server load.
 
 #### Requirements
 ```shell
 Required one of the following to have on the server: python OR bc OR php
-It is used for floating point values calculation
+It is used for calculation floating point values 
 ```
 
 #### Configuration
 ```shell
-
 // Where to send the warning mail
 OPTION_ALERT_EMAIL="your@personal.email"
 
 // If the high CPU load exceeds this value, then will be sent an email alert
-OPTION_ALERT_ON_CPU_LOAD_IF_EXCEEDS=75  #integer
+OPTION_ALERT_ON_CPU_LOAD_IF_EXCEEDS=75  #decimal
 
 // How many times check the top loaded process
 OPTION_CHECK_n_TIMES=5                  #integer
@@ -41,10 +40,10 @@ OPTION_CRONTAB_SCHEDULE="*/5 * * * *"
 
 #### Installation
 ```shell
-// will be created a cron job
+// will be created a cron job for this file
 monitor_cpu.sh install
 
-//
+// will be created a cron job for this file
 monitor_disk_space.sh install
 ```
 
@@ -53,7 +52,7 @@ monitor_disk_space.sh install
 // will be removed the cron job created after installation
 monitor_cpu.sh uninstall
 
-//
+// will be removed the cron job created after installation
 monitor_disk_space.sh uninstall
 ```
 
