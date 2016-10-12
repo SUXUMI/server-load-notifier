@@ -2,7 +2,7 @@
 Shell scripts which sends email alert if CPU/Disk Space usage continuously goes above a certain amount.
 
 **monitor_cpu.sh** - monitor cpu usage
->These script is kind of System Activity Reporter [SAR] on Linux.<br>
+>These script is a kind of System Activity Reporter [SAR] on Linux.<br>
 Using these script user gets email alert on **cpu overload** overload and get detailed information for overloaded processes<br>Calculation is based on the very top loaded process load value
 
 **monitor_disk_space.sh** - monitor disk space usage
