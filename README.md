@@ -8,7 +8,7 @@ Using these script user gets email alert on **cpu overload** and get detailed in
 **monitor_disk_space.sh** - monitor disk space usage
 >Using these script user gets email alert on **disk space usage** overload and report file system disk space usage.
 
-##USAGE
+## USAGE
 Put the script file in an appropriate folder and run the installation command. Then it will be created a cronjob for that file, which will monitor the server load.
 
 #### Requirements
@@ -47,7 +47,7 @@ monitor_cpu.sh install
 monitor_disk_space.sh install
 ```
 
-#### De-installation
+#### Uninstallation
 ```shell
 // will be removed the cron job created after installation
 monitor_cpu.sh uninstall
@@ -58,7 +58,7 @@ monitor_disk_space.sh uninstall
 
 #### Email sample
 
-#####in case of monitor_cpu.sh
+##### in case of monitor_cpu.sh
 ```shell
 USER    PID     %CPU    %MEM    TIME    COMMAND
 apache  9298    12.8    0.1     0:01    /usr/sbin/httpd+
@@ -67,8 +67,8 @@ mysql   18667   5.6     0.4     1841:19 mysqld
 apache  9288    9.3     0.1     0:04    /usr/sbin/httpd+
 ```
 
-#####in case of monitor_disk_space.sh
-```
+##### in case of monitor_disk_space.sh
+```shell
 Filesystem  Size  Used  Avail  Use%  Mounted on
 /dev/md5         16G  3.0G   12G  21% /usr+
 /dev/md1        488M  104M  359M  23% /boot+
